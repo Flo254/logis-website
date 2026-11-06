@@ -1,0 +1,389 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Services - Logis Kenya{% endblock %}
+{% block body_class %}services-page{% endblock %}
+
+{% block content %}
+  <!-- Page Title -->
+  <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'images/page-title-bg.jpg' %});">
+    <div class="container position-relative">
+      <h1>Logistics &amp; Freight Services</h1>
+      <p>End-to-end transport, port evacuation, customs brokerage, and warehousing across Kenya and East Africa.</p>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="current">Services</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Featured Services Section -->
+  <section id="featured-services" class="featured-services section">
+
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon flex-shrink-0"><i class="fa-solid fa-cart-flatbed"></i></div>
+          <div>
+            <h4 class="title">Express Parcel Delivery</h4>
+            <p class="description">Same-day courier within Nairobi metropolitan and guaranteed next-day dispatch to all major Kenyan towns.</p>
+            <a href="{% url 'service_details' %}" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon flex-shrink-0"><i class="fa-solid fa-truck"></i></div>
+          <div>
+            <h4 class="title">Inter-County Road Haulage</h4>
+            <p class="description">Dedicated full-truckload (FTL) and consolidated cargo moving seamlessly along the Northern Transport Corridor.</p>
+            <a href="{% url 'service_details' %}" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon flex-shrink-0"><i class="fa-solid fa-truck-ramp-box"></i></div>
+          <div>
+            <h4 class="title">Port &amp; ICD Cargo Evacuation</h4>
+            <p class="description">Prompt clearance and container haulage from Kilindini Harbour in Mombasa and the Inland Container Depot in Nairobi.</p>
+            <a href="{% url 'service_details' %}" class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
+
+      </div>
+
+    </div>
+
+  </section><!-- /Featured Services Section -->
+
+  <!-- Services Section -->
+  <section id="services" class="services section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <span>Our Capabilities</span>
+      <h2>Comprehensive Logistics Solutions</h2>
+      <p>Tailored freight and cargo forwarding infrastructure designed for reliability and speed</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card">
+            <div class="card-img">
+              <img src="{% static 'images/service-1.jpg' %}" alt="Bonded Warehousing" class="img-fluid">
+            </div>
+            <h3><a href="{% url 'service_details' %}" class="stretched-link">Secure Warehousing</a></h3>
+            <p>Modern bonded and general warehousing facilities in Nairobi and Mombasa with CCTV, inventory tracking, and 24/7 security.</p>
+          </div>
+        </div><!-- End Card Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card">
+            <div class="card-img">
+              <img src="{% static 'images/service-2.jpg' %}" alt="Ocean Freight" class="img-fluid">
+            </div>
+            <h3><a href="{% url 'service_details' %}" class="stretched-link">Ocean Freight Logistics</a></h3>
+            <p>Full container loads (FCL) and less-than-container loads (LCL) imported and exported through the Port of Mombasa.</p>
+          </div>
+        </div><!-- End Card Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card">
+            <div class="card-img">
+              <img src="{% static 'images/service-3.jpg' %}" alt="Air Freight" class="img-fluid">
+            </div>
+            <h3><a href="{% url 'service_details' %}" class="stretched-link">Air Cargo Handling</a></h3>
+            <p>Priority air cargo handling via Jomo Kenyatta International Airport (JKIA) for high-value and perishable shipments.</p>
+          </div>
+        </div><!-- End Card Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="card">
+            <div class="card-img">
+              <img src="{% static 'images/service-4.jpg' %}" alt="Heavy Haulage" class="img-fluid">
+            </div>
+            <h3><a href="{% url 'service_details' %}" class="stretched-link">Heavy Haulage &amp; Flatbeds</a></h3>
+            <p>Specialized low-loaders, flatbeds, and multi-axle trailers designed for out-of-gauge equipment and construction machinery.</p>
+          </div>
+        </div><!-- End Card Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="card">
+            <div class="card-img">
+              <img src="{% static 'images/service-5.jpg' %}" alt="Protective Packaging" class="img-fluid">
+            </div>
+            <h3><a href="{% url 'service_details' %}" class="stretched-link">Export &amp; Industrial Packaging</a></h3>
+            <p>Custom crating, pallet wrapping, and weather-proof containerization keeping your goods intact across rough terrain.</p>
+          </div>
+        </div><!-- End Card Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="card">
+            <div class="card-img">
+              <img src="{% static 'images/service-6.jpg' %}" alt="Cold Chain Distribution" class="img-fluid">
+            </div>
+            <h3><a href="{% url 'service_details' %}" class="stretched-link">Cold Chain Logistics</a></h3>
+            <p>Temperature-regulated refrigerated trucks and cold rooms for fresh horticultural produce, dairy, and pharmaceuticals.</p>
+          </div>
+        </div><!-- End Card Item -->
+
+      </div>
+
+    </div>
+
+  </section><!-- /Services Section -->
+
+  <!-- Features Section -->
+  <section id="features" class="features section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <span>Key Advantages</span>
+      <h2>Why Kenyan Businesses Trust Logis</h2>
+      <p>Dependable infrastructure, proven safety records, and seasoned logistics professionals</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row gy-4 align-items-center features-item">
+        <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+          <img src="{% static 'images/features-1.jpg' %}" class="img-fluid" alt="Real-time Tracking">
+        </div>
+        <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+          <h3>Real-time GPS Tracking &amp; Transparent Milestone Updates</h3>
+          <p class="fst-italic">
+            Know exactly where your cargo is from the instant it leaves Mombasa Port to final offloading at your warehouse.
+          </p>
+          <ul>
+            <li><i class="bi bi-check text-warning"></i> <span>Automated SMS arrival notifications at key checkpoints along the Northern Corridor.</span></li>
+            <li><i class="bi bi-check text-warning"></i> <span>Live digital bills of lading and instant proof-of-delivery (POD) sign-offs.</span></li>
+            <li><i class="bi bi-check text-warning"></i> <span>Driver telemetry monitoring to eliminate unauthorized stops and delays.</span></li>
+          </ul>
+        </div>
+      </div><!-- Features Item -->
+
+      <div class="row gy-4 align-items-center features-item">
+        <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'images/features-2.jpg' %}" class="img-fluid" alt="Customs Brokerage">
+        </div>
+        <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+          <h3>Rapid Kenya Revenue Authority (KRA) &amp; Port Clearance</h3>
+          <p class="fst-italic">
+            Avoid costly demurrage and port storage fees with our in-house licensed customs clearing agents.
+          </p>
+          <p>
+            We manage single customs declarations via the Kenya TradeNet System, KEBS standardization verification, Kentrade bonds, and Port health clearance so your shipping containers are evacuated without bureaucratic delays.
+          </p>
+        </div>
+      </div><!-- Features Item -->
+
+      <div class="row gy-4 align-items-center features-item">
+        <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+          <img src="{% static 'images/features-3.jpg' %}" class="img-fluid" alt="Dedicated Truck Fleet">
+        </div>
+        <div class="col-md-7" data-aos="fade-up">
+          <h3>Modern, Well-Maintained Commercial Fleet</h3>
+          <p>Our fleet undergoes stringent scheduled maintenance and preventative checks before dispatch. Backed by roadside emergency recovery teams, we maintain a 99.4% on-time delivery record across all road conditions.</p>
+          <ul>
+            <li><i class="bi bi-check text-warning"></i> <span>Prime movers equipped with speed governors and fatigue detection technology.</span></li>
+            <li><i class="bi bi-check text-warning"></i> <span>Heavy-duty air suspension systems protecting sensitive and fragile cargo.</span></li>
+            <li><i class="bi bi-check text-warning"></i> <span>Certified hazardous materials (HAZMAT) transport capability.</span></li>
+          </ul>
+        </div>
+      </div><!-- Features Item -->
+
+      <div class="row gy-4 align-items-center features-item">
+        <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
+          <img src="{% static 'images/features-4.jpg' %}" class="img-fluid" alt="Customer Support">
+        </div>
+        <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+          <h3>24/7 Dedicated Logistics Helpdesk</h3>
+          <p class="fst-italic">
+            Direct access to responsive logistics managers who understand your local routes, timelines, and business priorities.
+          </p>
+          <p>
+            No automated runarounds—whenever you call or message, you connect directly with logistics coordinators ready to adjust routes, provide cargo status updates, or arrange rapid last-mile drop-offs.
+          </p>
+        </div>
+      </div><!-- Features Item -->
+
+    </div>
+
+  </section><!-- /Features Section -->
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials section dark-background">
+
+    <img src="{% static 'images/testimonials-bg.jpg' %}" class="testimonials-bg" alt="">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="swiper init-swiper">
+        <script type="application/json" class="swiper-config">
+          {
+            "loop": true,
+            "speed": 600,
+            "autoplay": {
+              "delay": 5000
+            },
+            "slidesPerView": "auto",
+            "pagination": {
+              "el": ".swiper-pagination",
+              "type": "bullets",
+              "clickable": true
+            }
+          }
+        </script>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="{% static 'images/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="David Kariuki">
+              <h3>David Kariuki</h3>
+              <h4>Operations Director, Mombasa Tea Exporters</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Logis Kenya has transformed our export delivery schedule. Evacuating containers from Kericho to the Port of Mombasa used to cause severe bottlenecks, but their team guarantees 24-hour turnaround with flawless documentation.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="{% static 'images/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="Faith Wambui">
+              <h3>Faith Wambui</h3>
+              <h4>Supply Chain Lead, Nairobi Retail Distributors</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>We rely on Logis for daily store replenishments across Nairobi, Nakuru, and Eldoret. Their live GPS tracking gives us complete visibility, and we have recorded zero loss across over 300 shipments this year.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="{% static 'images/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="Hassan Omar">
+              <h3>Hassan Omar</h3>
+              <h4>Managing Director, Coast Auto Spares Ltd</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Their customs clearance desk at Mombasa Port saved us millions of shillings in potential demurrage. They handle port authorities with total professionalism and dispatch our consignments immediately.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="{% static 'images/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="Kennedy Ochieng">
+              <h3>Kennedy Ochieng</h3>
+              <h4>Head of Logistics, Lake Region Agribusiness</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Their cold chain trucks have kept our fresh fish and agricultural produce fresh during overnight transit between Kisumu and Nairobi. Professional drivers, punctual arrivals, and great rates.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+
+  </section><!-- /Testimonials Section -->
+
+  <!-- Faq Section -->
+  <section id="faq" class="faq section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <span>Got Questions?</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything you need to know about our Kenyan and regional transport services</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-10">
+
+          <div class="faq-container">
+
+            <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+              <i class="faq-icon bi bi-question-circle"></i>
+              <h3>How fast can you transport cargo between Mombasa and Nairobi?</h3>
+              <div class="faq-content">
+                <p>Standard road freight between the Port of Mombasa and Nairobi takes between 18 to 24 hours under normal transit conditions. We also coordinate express Standard Gauge Railway (SGR) rail freight with same-day transfers to the Nairobi Inland Container Depot (ICD).</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+              <i class="faq-icon bi bi-question-circle"></i>
+              <h3>Do you provide real-time GPS tracking for every shipment?</h3>
+              <div class="faq-content">
+                <p>Yes. Every vehicle in our fleet is integrated with satellite GPS tracking. Clients receive an automated tracking link with live map updates and automated milestone SMS notifications as your shipment passes each checkpoint.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+              <i class="faq-icon bi bi-question-circle"></i>
+              <h3>Is my cargo insured while in transit?</h3>
+              <div class="faq-content">
+                <p>All consignments handled by Logis Kenya are covered by our comprehensive Goods-In-Transit (GIT) policy. For specialized or exceptionally high-value shipments, we also offer extended all-risks marine and inland cargo insurance.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+              <i class="faq-icon bi bi-question-circle"></i>
+              <h3>What payment methods do you accept in Kenya?</h3>
+              <div class="faq-content">
+                <p>We accept M-Pesa (Buy Goods Till / Paybill), direct bank wire transfers (RTGS/EFT), major credit/debit cards, and 30-day invoiced corporate credit accounts for vetted enterprise partners.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+              <i class="faq-icon bi bi-question-circle"></i>
+              <h3>Do you handle cross-border transport to neighboring countries?</h3>
+              <div class="faq-content">
+                <p>Yes. We operate cross-border routes along the Northern and Central transport corridors serving Uganda (Kampala, Jinja), Tanzania (Dar es Salaam, Arusha), Rwanda (Kigali), and South Sudan (Juba) with complete COMESA customs bond coverage.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Faq Section -->
+{% endblock %}

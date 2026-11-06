@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>{% block title %}Logis - Kenya Logistics &amp; Freight Services{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}Reliable freight forwarding, road haulage, warehousing, and delivery services across Kenya and East Africa.{% endblock %}">
+  <meta name="keywords" content="{% block meta_keywords %}logistics Kenya, cargo delivery Nairobi, freight Mombasa, transport Kenya, warehousing, parcel delivery{% endblock %}">
+
+  <!-- Favicons -->
+  <link href="{% static 'images/favicon.png' %}" rel="icon">
+  <link href="{% static 'images/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'style/main.css' %}" rel="stylesheet">
+
+  {% block extra_css %}{% endblock %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">Logis</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Home<br></a></li>
+          <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a></li>
+          <li><a href="{% url 'services' %}" class="{% if request.resolver_match.url_name == 'services' %}active{% endif %}">Services</a></li>
+          <li><a href="{% url 'pricing' %}" class="{% if request.resolver_match.url_name == 'pricing' %}active{% endif %}">Pricing</a></li>
+          <li class="dropdown"><a href="#" class="{% if request.resolver_match.url_name == 'service_details' or request.resolver_match.url_name == 'starterpage' %}active{% endif %}"><span>More</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="{% url 'service_details' %}" class="{% if request.resolver_match.url_name == 'service_details' %}active{% endif %}">Service Details</a></li>
+              <li><a href="{% url 'starterpage' %}" class="{% if request.resolver_match.url_name == 'starterpage' %}active{% endif %}">Starter Page</a></li>
+              <li><a href="{% url 'pricing' %}">Pricing Plans</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="{% url 'getaquote' %}">Get a Quote</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4 justify-content-between">
+        <div class="col-lg-6 col-md-12 footer-about">
+          <a href="{% url 'index' %}" class="logo d-flex align-items-center">
+            <span class="sitename">Logis</span>
+          </a>
+          <p class="pe-lg-4">Your trusted logistics and freight partner in Kenya. Delivering fast, secure, and professional road transport, port clearance, air freight, and warehousing across Nairobi, Mombasa, Kisumu, and East Africa.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-contact text-md-start">
+          <h4>Contact Us</h4>
+          <p>Mombasa Road, Near Inland Container Depot (ICD)</p>
+          <p>P.O. Box 45210 - 00100</p>
+          <p>Nairobi, Kenya</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+254 712 345 678</span></p>
+          <p><strong>Email:</strong> <span>info@logis.co.ke</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Logis Kenya</strong> <span>All Rights Reserved</span></p>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+  {% block extra_js %}{% endblock %}
+
+</body>
+
+</html>

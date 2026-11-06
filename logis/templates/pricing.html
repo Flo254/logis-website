@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Pricing Plans - Logis Kenya{% endblock %}
+{% block body_class %}pricing-page{% endblock %}
+
+{% block content %}
+  <!-- Page Title -->
+  <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'images/page-title-bg.jpg' %});">
+    <div class="container position-relative">
+      <h1>Transparent Logistics Pricing</h1>
+      <p>Competitive, predictable shipping and warehousing rates tailored for businesses, e-commerce, and cargo consignments across Kenya.</p>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="current">Pricing</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <span>Pricing Plans</span>
+      <h2>Our Shipping &amp; Cargo Rates</h2>
+      <p>Select the logistics package that matches your consignment volume, speed, and handling requirements</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="pricing-item">
+            <h3>Parcel Express</h3>
+            <h4><sup>KSh</sup>1,500<span> / parcel</span></h4>
+            <ul>
+              <li><i class="bi bi-check"></i> <span>Up to 10 kg parcel delivery</span></li>
+              <li><i class="bi bi-check"></i> <span>Same-day delivery within Nairobi</span></li>
+              <li><i class="bi bi-check"></i> <span>SMS and live tracking link</span></li>
+              <li><i class="bi bi-check"></i> <span>Standard transit insurance</span></li>
+              <li class="na"><i class="bi bi-x"></i> <span>Dedicated full truckload</span></li>
+            </ul>
+            <a href="{% url 'getaquote' %}" class="buy-btn">Book Shipment</a>
+          </div>
+        </div><!-- End Pricing Item -->
+
+        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="pricing-item featured">
+            <h3>Commercial Cargo</h3>
+            <h4><sup>KSh</sup>18,500<span> / consignment</span></h4>
+            <ul>
+              <li><i class="bi bi-check"></i> <span>Consolidated freight up to 3 Tonnes</span></li>
+              <li><i class="bi bi-check"></i> <span>Mombasa Port to Nairobi transit (24-48h)</span></li>
+              <li><i class="bi bi-check"></i> <span>Complete customs documentation handling</span></li>
+              <li><i class="bi bi-check"></i> <span>Full transit cargo insurance</span></li>
+              <li><i class="bi bi-check"></i> <span>Dedicated logistics coordinator</span></li>
+            </ul>
+            <a href="{% url 'getaquote' %}" class="buy-btn">Get Started</a>
+          </div>
+        </div><!-- End Pricing Item -->
+
+        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="pricing-item">
+            <h3>Full Container / Fleet</h3>
+            <h4><sup>KSh</sup>55,000<span> / container</span></h4>
+            <ul>
+              <li><i class="bi bi-check"></i> <span>20ft &amp; 40ft container haulage</span></li>
+              <li><i class="bi bi-check"></i> <span>Nationwide delivery across all 47 counties</span></li>
+              <li><i class="bi bi-check"></i> <span>Direct offloading at your warehouse</span></li>
+              <li><i class="bi bi-check"></i> <span>GPS telemetry and cold chain monitoring</span></li>
+              <li><i class="bi bi-check"></i> <span>24/7 priority customer support</span></li>
+            </ul>
+            <a href="{% url 'getaquote' %}" class="buy-btn">Request Contract</a>
+          </div>
+        </div><!-- End Pricing Item -->
+
+      </div>
+
+    </div>
+
+  </section><!-- /Pricing Section -->
+
+  <!-- Alt Pricing Section -->
+  <section id="alt-pricing" class="alt-pricing section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <span>Service Rates Breakdown</span>
+      <h2>Scheduled Freight Tiers</h2>
+      <p>Transparent rates for regular inter-county cargo dispatches between major commercial hubs</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row gy-4 pricing-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-3 d-flex align-items-center justify-content-center">
+          <h3>Nairobi - Mombasa Corridor</h3>
+        </div>
+        <div class="col-lg-3 d-flex align-items-center justify-content-center">
+          <h4><sup>KSh</sup>4,500<span> / 100 kg</span></h4>
+        </div>
+        <div class="col-lg-3 d-flex align-items-center justify-content-center">
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Next-day scheduled departure</span></li>
+            <li><i class="bi bi-check"></i> <span>Direct ICD / Port connectivity</span></li>
+            <li><i class="bi bi-check"></i> <span>Proof of delivery on arrival</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 d-flex align-items-center justify-content-center">
+          <div class="text-center"><a href="{% url 'getaquote' %}" class="buy-btn">Book Route</a></div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+      <div class="row gy-4 pricing-item featured mt-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-3 d-flex align-items-center justify-content-center">
+          <h3>Western &amp; Rift Valley Corridor</h3>
+        </div>
+        <div class="col-lg-3 d-flex align-items-center justify-content-center">
+          <h4><sup>KSh</sup>6,500<span> / 100 kg</span></h4>
+        </div>
+        <div class="col-lg-3 d-flex align-items-center justify-content-center">
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Nakuru, Eldoret, Kisumu coverage</span></li>
+            <li><i class="bi bi-check"></i> <strong>Secure warehousing hubs</strong></li>
+            <li><i class="bi bi-check"></i> <span>Agricultural &amp; industrial cargo specialists</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 d-flex align-items-center justify-content-center">
+          <div class="text-center"><a href="{% url 'getaquote' %}" class="buy-btn">Book Route</a></div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+      <div class="row gy-4 pricing-item mt-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-lg-3 d-flex align-items-center justify-content-center">
+          <h3>Cross-Border East Africa</h3>
+        </div>
+        <div class="col-lg-3 d-flex align-items-center justify-content-center">
+          <h4><sup>KSh</sup>25,000<span> / tonne</span></h4>
+        </div>
+        <div class="col-lg-3 d-flex align-items-center justify-content-center">
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Uganda, Tanzania, Rwanda transit</span></li>
+            <li><i class="bi bi-check"></i> <span>COMESA customs bond processing</span></li>
+            <li><i class="bi bi-check"></i> <span>Continuous satellite fleet monitoring</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 d-flex align-items-center justify-content-center">
+          <div class="text-center"><a href="{% url 'getaquote' %}" class="buy-btn">Book Route</a></div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+    </div>
+
+  </section><!-- /Alt Pricing Section -->
+{% endblock %}

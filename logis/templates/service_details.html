@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Service Details - Logis Kenya{% endblock %}
+{% block body_class %}service-details-page{% endblock %}
+
+{% block content %}
+  <!-- Page Title -->
+  <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'images/page-title-bg.jpg' %});">
+    <div class="container position-relative">
+      <h1>Logistics &amp; Cargo Haulage Solutions</h1>
+      <p>Comprehensive freight management connecting the Port of Mombasa, Nairobi ICD, and major hubs across Kenya.</p>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="current">Service Details</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- Service Details Section -->
+  <section id="service-details" class="service-details section">
+
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="services-list">
+            <a href="{% url 'service_details' %}" class="active">Road Haulage &amp; SGR Transit</a>
+            <a href="{% url 'service_details' %}">Ocean Cargo &amp; Port Clearance</a>
+            <a href="{% url 'service_details' %}">Air Freight Express</a>
+            <a href="{% url 'service_details' %}">Warehousing &amp; Inventory Hubs</a>
+            <a href="{% url 'service_details' %}">Last-Mile Distribution</a>
+          </div>
+
+          <h4>Need a Customized Logistics Solution?</h4>
+          <p>Our experienced supply chain consultants work directly with manufacturers, retailers, and agricultural exporters across Kenya to minimize transit time and reduce shipping overheads.</p>
+          <a href="{% url 'getaquote' %}" class="btn btn-primary w-100 mt-2">Request Custom Quote</a>
+        </div>
+
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+          <img src="{% static 'images/services.jpg' %}" alt="Logistics Services Kenya" class="img-fluid services-img">
+          <h3>Reliable Inter-County Road Freight &amp; Port-to-Door Transportation</h3>
+          <p>
+            Logis Kenya operates a modern, GPS-monitored fleet of trucks, flatbeds, and box trailers capable of transporting dry cargo, reefer containers, and oversized industrial equipment. With strategic dispatch depots in Mombasa, Nairobi, Nakuru, Eldoret, and Kisumu, we guarantee seamless scheduling and prompt arrivals.
+          </p>
+          <ul>
+            <li><i class="bi bi-check-circle text-warning"></i> <span>Direct clearance and evacuation of containers from the Port of Mombasa and Nairobi ICD.</span></li>
+            <li><i class="bi bi-check-circle text-warning"></i> <span>Real-time satellite GPS tracking with automated SMS and email milestone notifications.</span></li>
+            <li><i class="bi bi-check-circle text-warning"></i> <span>Comprehensive marine and inland goods-in-transit (GIT) insurance coverage on every consignment.</span></li>
+          </ul>
+          <p>
+            Whether you require consolidated less-than-truckload (LTL) deliveries or dedicated full-truckload (FTL) charters, our drivers and logistics officers follow strict safety compliance and defensive driving standards to ensure your cargo arrives in pristine condition.
+          </p>
+          <p>
+            Our customer support desk is available around the clock to assist you with customs documentation, weighbridge clearances, SGR coordination, and express route planning across Kenya and border crossings to Uganda, Tanzania, and Rwanda.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Service Details Section -->
+{% endblock %}

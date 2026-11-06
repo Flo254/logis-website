@@ -1,0 +1,345 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - Logis Kenya{% endblock %}
+{% block body_class %}about-page{% endblock %}
+
+{% block content %}
+  <!-- Page Title -->
+  <div class="page-title dark-background" data-aos="fade" style="background-image: url({% static 'images/page-title-bg.jpg' %});">
+    <div class="container position-relative">
+      <h1>About Logis Kenya</h1>
+      <p>Building East Africa’s most reliable, transparent, and technology-driven supply chain network.</p>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li class="current">About</li>
+        </ol>
+      </nav>
+    </div>
+  </div><!-- End Page Title -->
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" data-aos="fade-up" data-aos-delay="200">
+          <img src="{% static 'images/about.jpg' %}" class="img-fluid" alt="Logis Kenya Team">
+          <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+        </div>
+
+        <div class="col-lg-6 content order-last order-lg-first" data-aos="fade-up" data-aos-delay="100">
+          <h3>Your Strategic Supply Chain Partner in Kenya</h3>
+          <p>
+            Founded with a vision to simplify freight forwarding and cargo transport in East Africa, Logis Kenya has grown into one of the country's most respected logistics providers. Headquartered along Mombasa Road in Nairobi with branch facilities at the Port of Mombasa, we provide an unbreakable link between marine shipping, rail transport, and road distribution.
+          </p>
+          <ul>
+            <li>
+              <i class="bi bi-diagram-3 text-warning"></i>
+              <div>
+                <h5>Comprehensive Inter-County Network</h5>
+                <p>Scheduled daily departures connecting Nairobi, Mombasa, Kisumu, Nakuru, Eldoret, and border transit corridors.</p>
+              </div>
+            </li>
+            <li>
+              <i class="bi bi-shield-check text-warning"></i>
+              <div>
+                <h5>Stringent Safety &amp; Regulatory Compliance</h5>
+                <p>Fully compliant with NTSA safety standards, KRA customs clearance guidelines, and KEBS cargo protection protocols.</p>
+              </div>
+            </li>
+            <li>
+              <i class="bi bi-broadcast text-warning"></i>
+              <div>
+                <h5>Real-Time GPS Tracking &amp; Transparency</h5>
+                <p>Every shipment is tracked 24/7 with instant milestone alerts, leaving no guesswork about your delivery status.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /About Section -->
+
+  <!-- Stats Section -->
+  <section id="stats" class="stats section">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item text-center w-100 h-100">
+            <span data-purecounter-start="0" data-purecounter-end="1850" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Active Corporate Clients</p>
+          </div>
+        </div><!-- End Stats Item -->
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item text-center w-100 h-100">
+            <span data-purecounter-start="0" data-purecounter-end="45000" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Shipments Delivered</p>
+          </div>
+        </div><!-- End Stats Item -->
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item text-center w-100 h-100">
+            <span data-purecounter-start="0" data-purecounter-end="47" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Kenyan Counties Reached</p>
+          </div>
+        </div><!-- End Stats Item -->
+
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item text-center w-100 h-100">
+            <span data-purecounter-start="0" data-purecounter-end="120" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Fleet Vehicles &amp; Prime Movers</p>
+          </div>
+        </div><!-- End Stats Item -->
+
+      </div>
+
+    </div>
+
+  </section><!-- /Stats Section -->
+
+  <!-- Team Section -->
+  <section id="team" class="team section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <span>Leadership</span>
+      <h2>Experienced Logistics Leadership</h2>
+      <p>Dedicated industry professionals steering logistics excellence and supply chain efficiency across Kenya</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="member">
+            <img src="{% static 'images/team/team-1.jpg' %}" class="img-fluid" alt="Samuel Mwangi">
+            <div class="member-content">
+              <h4>Samuel Mwangi</h4>
+              <span>Managing Director &amp; Co-Founder</span>
+              <p>
+                Over 18 years of leadership across maritime transport and regional supply chain networks in Kenya and East Africa.
+              </p>
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div><!-- End Team Member -->
+
+        <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="member">
+            <img src="{% static 'images/team/team-2.jpg' %}" class="img-fluid" alt="Grace Adhiambo">
+            <div class="member-content">
+              <h4>Grace Adhiambo</h4>
+              <span>Head of Freight Operations</span>
+              <p>
+                Expert in Mombasa port evacuation, customs brokerage, and multi-modal transit coordination for commercial imports.
+              </p>
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div><!-- End Team Member -->
+
+        <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+          <div class="member">
+            <img src="{% static 'images/team/team-3.jpg' %}" class="img-fluid" alt="Peter Mutua">
+            <div class="member-content">
+              <h4>Peter Mutua</h4>
+              <span>Fleet Safety &amp; Maintenance Director</span>
+              <p>
+                Oversees fleet health, defensive driver training, telemetry systems, and 24/7 roadside rapid assistance.
+              </p>
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div><!-- End Team Member -->
+
+      </div>
+
+    </div>
+
+  </section><!-- /Team Section -->
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials section dark-background">
+
+    <img src="{% static 'images/testimonials-bg.jpg' %}" class="testimonials-bg" alt="">
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="swiper init-swiper">
+        <script type="application/json" class="swiper-config">
+          {
+            "loop": true,
+            "speed": 600,
+            "autoplay": {
+              "delay": 5000
+            },
+            "slidesPerView": "auto",
+            "pagination": {
+              "el": ".swiper-pagination",
+              "type": "bullets",
+              "clickable": true
+            }
+          }
+        </script>
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="{% static 'images/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="David Kariuki">
+              <h3>David Kariuki</h3>
+              <h4>Operations Director, Mombasa Tea Exporters</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Logis Kenya has transformed our export delivery schedule. Evacuating containers from Kericho to the Port of Mombasa used to cause severe bottlenecks, but their team guarantees 24-hour turnaround with flawless documentation.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="{% static 'images/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="Faith Wambui">
+              <h3>Faith Wambui</h3>
+              <h4>Supply Chain Lead, Nairobi Retail Distributors</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>We rely on Logis for daily store replenishments across Nairobi, Nakuru, and Eldoret. Their live GPS tracking gives us complete visibility, and we have recorded zero loss across over 300 shipments this year.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="{% static 'images/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="Hassan Omar">
+              <h3>Hassan Omar</h3>
+              <h4>Managing Director, Coast Auto Spares Ltd</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Their customs clearance desk at Mombasa Port saved us millions of shillings in potential demurrage. They handle port authorities with total professionalism and dispatch our consignments immediately.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <img src="{% static 'images/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="Kennedy Ochieng">
+              <h3>Kennedy Ochieng</h3>
+              <h4>Head of Logistics, Lake Region Agribusiness</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Their cold chain trucks have kept our fresh fish and agricultural produce fresh during overnight transit between Kisumu and Nairobi. Professional drivers, punctual arrivals, and great rates.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+
+  </section><!-- /Testimonials Section -->
+
+  <!-- Faq Section -->
+  <section id="faq" class="faq section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <span>Company Questions</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>Learn more about our standards, operating model, and cargo handling procedures</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-10">
+
+          <div class="faq-container">
+
+            <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+              <i class="faq-icon bi bi-question-circle"></i>
+              <h3>Where are your primary warehouse facilities located in Kenya?</h3>
+              <div class="faq-content">
+                <p>Our main distribution and bonded warehousing hubs are situated on Mombasa Road near the Inland Container Depot (ICD) in Nairobi, and along the airport corridor in Changamwe, Mombasa. We also operate secondary transit depots in Nakuru, Eldoret, and Kisumu.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+              <i class="faq-icon bi bi-question-circle"></i>
+              <h3>Are you licensed to handle Kenya Revenue Authority (KRA) bonded cargo?</h3>
+              <div class="faq-content">
+                <p>Yes. Logis Kenya holds valid KRA customs agent licenses, Kentrade accreditation, and transit bond permits to clear and transport bonded cargo directly from Mombasa Port to any designated dry port or bonded warehouse in East Africa.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+              <i class="faq-icon bi bi-question-circle"></i>
+              <h3>What measures are taken to guarantee shipment security?</h3>
+              <div class="faq-content">
+                <p>All trucks feature tamper-proof electronic cargo seals, dual GPS tracking units with geofencing alerts, continuous video telematics, and armed escort arrangements available for high-value consignments.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+              <i class="faq-icon bi bi-question-circle"></i>
+              <h3>How can a new enterprise client open a monthly account?</h3>
+              <div class="faq-content">
+                <p>Businesses can submit an inquiry through our contact or quote forms, or email us at info@logis.co.ke. We verify your company registration details and issue credit terms within 48 hours.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div><!-- End Faq item-->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- /Faq Section -->
+{% endblock %}

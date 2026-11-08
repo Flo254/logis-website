@@ -39,6 +39,19 @@ Setup and Running
 
 4. Open your browser at `http://127.0.0.1:8000/`.
 
+Quote request emails
+
+The quote form sends email through SMTP. Configure these environment variables before starting Django:
+
+- `EMAIL_HOST`: SMTP server hostname
+- `EMAIL_PORT`: SMTP port (defaults to `587`)
+- `EMAIL_USE_TLS`: `true` for TLS (defaults to `true`)
+- `EMAIL_HOST_USER` and `EMAIL_HOST_PASSWORD`: SMTP credentials
+- `DEFAULT_FROM_EMAIL`: verified sender address
+- `QUOTE_RECIPIENT_EMAIL`: destination address (defaults to `info@logis.co.ke`)
+
+Do not commit SMTP credentials. The form only shows the success message after Django reports that the email was sent; SMTP errors are logged and shown as an error on the form.
+
 Running Tests
 
 ```bash

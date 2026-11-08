@@ -29,31 +29,41 @@
         <div class="col-lg-5 quote-bg" style="background-image: url({% static 'images/quote-bg.jpg' %});"></div>
 
         <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
-          <form action="#" method="post" class="php-email-form">
+          <form action="{% url 'getaquote' %}" method="post">
             {% csrf_token %}
             <h3>Get a Quote in Minutes</h3>
             <p>Tell us about your cargo requirements and our dispatch team will prepare a customized proposal with the best transport rates.</p>
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" role="status">{{ message }}</div>
+              {% endfor %}
+            {% endif %}
+            {% if form.errors %}
+              <div class="alert alert-danger" role="alert">
+                Please check the form details and try again. {{ form.errors }}
+              </div>
+            {% endif %}
 
             <div class="row gy-4">
 
               <div class="col-md-6">
                 <label class="form-label text-muted small">Origin</label>
-                <input type="text" name="departure" class="form-control" placeholder="Departure City (e.g. Mombasa Port, Nairobi)" required="">
+                <input type="text" name="departure" value="{{ form.departure.value|default_if_none:'' }}" class="form-control" placeholder="Departure City (e.g. Mombasa Port, Nairobi)" required="">
               </div>
 
               <div class="col-md-6">
                 <label class="form-label text-muted small">Destination</label>
-                <input type="text" name="delivery" class="form-control" placeholder="Destination City (e.g. Nairobi ICD, Kisumu, Eldoret)" required="">
+                <input type="text" name="delivery" value="{{ form.delivery.value|default_if_none:'' }}" class="form-control" placeholder="Destination City (e.g. Nairobi ICD, Kisumu, Eldoret)" required="">
               </div>
 
               <div class="col-md-6">
                 <label class="form-label text-muted small">Weight</label>
-                <input type="text" name="weight" class="form-control" placeholder="Total Weight in kg / Tonnes" required="">
+                <input type="text" name="weight" value="{{ form.weight.value|default_if_none:'' }}" class="form-control" placeholder="Total Weight in kg / Tonnes" required="">
               </div>
 
               <div class="col-md-6">
                 <label class="form-label text-muted small">Dimensions</label>
-                <input type="text" name="dimensions" class="form-control" placeholder="Dimensions (L x W x H in cm)" required="">
+                <input type="text" name="dimensions" value="{{ form.dimensions.value|default_if_none:'' }}" class="form-control" placeholder="Dimensions (L x W x H in cm)" required="">
               </div>
 
               <div class="col-lg-12">
@@ -61,26 +71,22 @@
               </div>
 
               <div class="col-12">
-                <input type="text" name="name" class="form-control" placeholder="Your Full Name or Company Name" required="">
+                <input type="text" name="name" value="{{ form.name.value|default_if_none:'' }}" class="form-control" placeholder="Your Full Name or Company Name" required="">
               </div>
 
               <div class="col-12">
-                <input type="email" class="form-control" name="email" placeholder="Email Address" required="">
+                <input type="email" class="form-control" name="email" value="{{ form.email.value|default_if_none:'' }}" placeholder="Email Address" required="">
               </div>
 
               <div class="col-12">
-                <input type="text" class="form-control" name="phone" placeholder="Kenyan Phone Number (e.g. +254 712 345 678)" required="">
+                <input type="text" name="phone" value="{{ form.phone.value|default_if_none:'' }}" class="form-control" placeholder="Kenyan Phone Number (e.g. +254 712 345 678)" required="">
               </div>
 
               <div class="col-12">
-                <textarea class="form-control" name="message" rows="5" placeholder="Special handling instructions, cargo description (fragile, perishable, heavy machinery), or timeline..." required=""></textarea>
+                <textarea class="form-control" name="message" rows="5" placeholder="Special handling instructions, cargo description (fragile, perishable, heavy machinery), or timeline..." required="">{{ form.message.value|default_if_none:'' }}</textarea>
               </div>
 
               <div class="col-12 text-center">
-                <div class="loading">Calculating your quote...</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your quote request has been sent successfully. We will contact you with the best rates!</div>
-
                 <button type="submit" class="btn btn-primary">Submit Quote Request</button>
               </div>
 
